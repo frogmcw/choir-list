@@ -30,8 +30,37 @@
 </head>
 <body>
 
+<div id="tabs">
+    <ul>
+        <li><a href="#fragment-1">Daily</a></li>
+        <li><a href="#fragment-2">Weekly</a></li>
+        <li><a href="#fragment-3">Monthly</a></li>
+        <li><a href="#fragment-4">Seasonally</a></li>
+    </ul>
+    <div id="fragment-1">
+        <p>Do this on the daily. For the kittens.</p>
+    </div>
+    <div id="fragment-2">
+        <p>Done weekly you</p>
+    </div>
+    <div id="fragment-3">
+        <p>These are handled on a monthly basis.</p>
+    </div>
+    <div id="fragment-4">
+        <p>These items are seasonal.</p>
+    </div>
+</div>
     <!-- JAVASCRIPT -->
     <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
     <script src="assets/scripts/main.js"></script>
+    <script>
+        $(function() {
+              $("#tabs").tabs()
+              .addClass("ui-tabs-vertical ui-helper-clearfix");
+              $("#tabs li")
+              .removeClass("ui-corner-top")
+              .addClass("ui-corner-left");
+            });
+    </script>
 </body>
 </html>
